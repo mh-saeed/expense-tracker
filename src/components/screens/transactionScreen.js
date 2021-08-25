@@ -1,12 +1,35 @@
-import React from 'react'
-import { View, Text } from 'react-native'
+import React from "react";
+import { View, Text, StyleSheet } from "react-native";
+import StatusCard from "../statusCard/statusCard";
+import BalanceStatus from "../statusCard/balanceStatus";
+import FormInput from "../form/form";
 
 const TransactionScreen = () => {
-    return (
-       <View>
-           <Text>Transaction History</Text>
-       </View>
-    )
-}
+  return (
+    <View style={styles.transContainer}>
+      <BalanceStatus />
+      <StatusCard />
+      <View style={styles.form}>
+        <FormInput />
+      </View>
+    </View>
+  );
+};
 
-export default TransactionScreen
+const styles = StyleSheet.create({
+  transContainer: {
+    flex: 1,
+    justifyContent: "flex-start",
+    alignItems: "center",
+    marginTop: 10,
+    backgroundColor:"red"
+  },
+  form: {
+    flex: 1,
+    flexDirection: "column",
+    width: 300,
+    position:"relative",
+  },
+});
+
+export default TransactionScreen;
