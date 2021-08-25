@@ -5,7 +5,7 @@ import { GlobalContext } from "../../context/GlobalState";
 
 const FormInput = () => {
   const [text, setText] = useState("");
-  const [amount, setAmount] = useState();
+  const [amount, setAmount] = useState(0);
 
   const { addTransactions } = useContext(GlobalContext);
 
@@ -49,7 +49,7 @@ const FormInput = () => {
         label="ENTER AMOUNT (e.g -amount/amount)"
         keyboardType="numeric"
         placeholder=" Enter Amount . . ."
-        value={amount}
+        value={amount.toString()}
         onChangeText={setAmount}
         leftIcon={
           <Icon
