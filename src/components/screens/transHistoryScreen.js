@@ -16,7 +16,7 @@ const TransHistoryScreen = () => {
             }`,
             borderLeftWidth: 5,
             marginTop: 2,
-            backgroundColor:"#fff"
+            backgroundColor: "#fff",
           }}
           bottomDivider
         >

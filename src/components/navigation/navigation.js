@@ -1,11 +1,10 @@
-import React from 'react';
+import React from "react";
 import { createDrawerNavigator } from "@react-navigation/drawer";
 import { NavigationContainer } from "@react-navigation/native";
-import HomeScreen from '../screens/homeScreen'
-import AboutScreen from '../screens/aboutScreen'
-import TransactionScreen from '../screens/transactionScreen'
-import TransHistoryScreen from '../screens/transHistoryScreen';
-
+import HomeScreen from "../screens/homeScreen";
+import AboutScreen from "../screens/aboutScreen";
+import TransactionScreen from "../screens/transactionScreen";
+import TransHistoryScreen from "../screens/transHistoryScreen";
 
 const Drawer = createDrawerNavigator();
 

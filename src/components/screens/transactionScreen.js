@@ -6,7 +6,7 @@ import FormInput from "../form/form";
 
 const TransactionScreen = () => {
   return (
-    <ScrollView style={{flex:1}}>
+    <ScrollView style={{ flex: 1 }}>
       <View style={styles.transContainer}>
         <View style={styles.balanceContainer}>
           <BalanceStatus />
@@ -25,7 +25,7 @@ const TransactionScreen = () => {
 const styles = StyleSheet.create({
   transContainer: {
     // flex: 1,
-    alignSelf:"center",
+    alignSelf: "center",
     alignItems: "center",
     marginTop: 10,
   },
@@ -35,13 +35,13 @@ const styles = StyleSheet.create({
   },
   statusCard: {
     alignSelf: "flex-start",
-    height:150,
-    top:-5
+    height: 150,
+    top: -5,
   },
   form: {
     width: 320,
-    top:5,
-    height:250,
+    top: 5,
+    height: 250,
   },
 });
 
