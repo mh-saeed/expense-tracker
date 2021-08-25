@@ -5,7 +5,7 @@ import { GlobalContext } from "../../context/GlobalState";
 
 const FormInput = () => {
   const [text, setText] = useState("");
-  const [amount, setAmount] = useState(0);
+  const [amount, setAmount] = useState();
 
   const { addTransactions } = useContext(GlobalContext);
 
@@ -32,7 +32,8 @@ const FormInput = () => {
   return (
     <View>
       <Input
-        placeholder="TRANSACTION NAME"
+      label={"TRANSACTION NAME"}
+        placeholder="Enter text . . ."
         value={text}
         onChangeText={setText}
         leftIcon={
@@ -45,8 +46,9 @@ const FormInput = () => {
         }
       />
       <Input
+      label="Enter Amount e.g -amount/amount"
         keyboardType="numeric"
-        placeholder="TRANSACTION AMOUNT"
+        placeholder=" Enter Amount . . ."
         value={amount}
         onChangeText={setAmount}
         leftIcon={
@@ -58,7 +60,7 @@ const FormInput = () => {
           />
         }
       />
-      <Button title="ADD TRANSACTION" onPress={(e) => onSubmit(encodeURI)} />
+      <Button title="ADD TRANSACTION" onPress={(e) => onSubmit(e)} />
     </View>
   );
 };

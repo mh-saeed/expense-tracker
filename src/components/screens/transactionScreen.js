@@ -40,7 +40,7 @@ const styles = StyleSheet.create({
     flex: 3,
     flexDirection: "column",
     width: 300,
-    top: 30,
+    top: 35,
   },
 });
 
