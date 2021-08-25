@@ -36,11 +36,11 @@ const styles = StyleSheet.create({
   statusCard: {
     alignSelf: "flex-start",
     height:150,
-    top:5
+    top:-5
   },
   form: {
     width: 320,
-    top:10,
+    top:5,
     height:250,
   },
 });
