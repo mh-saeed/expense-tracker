@@ -32,7 +32,7 @@ const FormInput = () => {
   return (
     <View>
       <Input
-      label={"TRANSACTION NAME"}
+        label={"TRANSACTION NAME"}
         placeholder="Enter text . . ."
         value={text}
         onChangeText={setText}
@@ -46,7 +46,7 @@ const FormInput = () => {
         }
       />
       <Input
-      label="Enter Amount e.g -amount/amount"
+        label="ENTER AMOUNT (e.g -amount/amount)"
         keyboardType="numeric"
         placeholder=" Enter Amount . . ."
         value={amount}

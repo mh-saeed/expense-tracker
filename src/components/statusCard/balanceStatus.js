@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { GlobalContext } from "../../context/GlobalState";
-import { View, Text } from 'react-native'
+import { View, Text, StyleSheet } from 'react-native'
 
 const BalanceStatus = () => {
     const { transactions } = useContext(GlobalContext);
@@ -10,9 +10,17 @@ const BalanceStatus = () => {
     return (
        <View>
            <Text>YOUR BALANCE</Text>
-           <Text>${total}</Text>
+           <Text style={styles.text}>${total}</Text>
        </View>
     )
 }
+
+const styles = StyleSheet.create({
+    text:{
+        fontSize:28,
+        color:'#006266',
+        fontWeight: '600'
+    }
+})
 
 export default BalanceStatus
