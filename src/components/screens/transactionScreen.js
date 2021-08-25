@@ -28,19 +28,19 @@ const styles = StyleSheet.create({
     marginTop: 10,
   },
   balanceContainer: {
-    flex:0.5,
+    flex: 0.4,
     alignSelf: "flex-start",
     left: 25,
   },
-  statusCard: { 
-    flex: 2,
-    top:10
-   },
+  statusCard: {
+    flex: 1.5,
+    top: 10,
+  },
   form: {
-    flex: 6,
+    flex: 3,
     flexDirection: "column",
     width: 300,
-    top: 55,
+    top: 30,
   },
 });
 
