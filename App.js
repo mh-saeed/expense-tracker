@@ -1,12 +1,14 @@
 import * as React from "react";
 import { StyleSheet, StatusBar, Platform, SafeAreaView } from "react-native";
-
 import { NavigationBar } from "./src";
+import { GlobalProvider } from "./src/context/GlobalState";
 
 const App = () => {
   return (
     <SafeAreaView style={styles.container}>
-      <NavigationBar />
+      <GlobalProvider>
+        <NavigationBar />
+      </GlobalProvider>
     </SafeAreaView>
   );
 };
