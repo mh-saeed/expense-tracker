@@ -20,21 +20,14 @@ const StatusCard = () => {
 
   return (
     <View>
-      <View>
-        <Text>Your Balance </Text>
-      </View>
-      <View style={styles.container}>
-        <Card title="HELLO WORLD">
-          <Text style={{ marginBottom: 10 }}>
-            Income {"\n"}
-            {income}
-          </Text>
+      <View style={styles.cardContainer}>
+        <Card title="Income" containerStyle={styles.card}>
+          <Text>INCOME</Text>
+          <Text>${income}</Text>
         </Card>
-        <Card title="HELLO WORLD">
-          <Text style={{ marginBottom: 10 }}>
-            Expense {"\n"}
-            {expense}
-          </Text>
+        <Card title="Expense" containerStyle={styles.card}>
+          <Text>EXPENSE</Text>
+          <Text>${expense}</Text>
         </Card>
       </View>
     </View>
@@ -42,11 +35,16 @@ const StatusCard = () => {
 };
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
+  cardContainer: {
+    flex: 0.5,
     flexDirection: "row",
-    alignItems: "center",
+    backgroundColor: "#4582B4",
+  },
+  card: {
+    height: 100,
+    width: 120,
     justifyContent: "center",
+    alignItems: "center",
   },
 });
 
