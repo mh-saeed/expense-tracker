@@ -36,13 +36,13 @@ const StatusCard = () => {
 
 const styles = StyleSheet.create({
   cardContainer: {
-    flex: 0.5,
+    flex:1,
     flexDirection: "row",
-    backgroundColor: "#4582B4",
+    // backgroundColor: "#4582B4",
   },
   card: {
-    height: 100,
-    width: 120,
+    height: 120,
+    width: 160,
     justifyContent: "center",
     alignItems: "center",
   },

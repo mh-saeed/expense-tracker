@@ -7,8 +7,12 @@ import FormInput from "../form/form";
 const TransactionScreen = () => {
   return (
     <View style={styles.transContainer}>
-      <BalanceStatus />
-      <StatusCard />
+      <View style={styles.balanceContainer}>
+        <BalanceStatus />
+      </View>
+      <View style={styles.statusCard}>
+        <StatusCard />
+      </View>
       <View style={styles.form}>
         <FormInput />
       </View>
@@ -22,13 +26,21 @@ const styles = StyleSheet.create({
     justifyContent: "flex-start",
     alignItems: "center",
     marginTop: 10,
-    backgroundColor:"red"
   },
+  balanceContainer: {
+    flex:0.5,
+    alignSelf: "flex-start",
+    left: 25,
+  },
+  statusCard: { 
+    flex: 2,
+    top:10
+   },
   form: {
-    flex: 1,
+    flex: 6,
     flexDirection: "column",
     width: 300,
-    position:"relative",
+    top: 55,
   },
 });
 

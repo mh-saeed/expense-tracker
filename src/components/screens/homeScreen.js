@@ -1,8 +1,7 @@
 import React from "react";
 import { View, Text, StyleSheet, Button } from "react-native";
-import TransactionScreen from "./transactionScreen"; 
+import TransactionScreen from "./transactionScreen";
 import TransHistoryScreen from "./transHistoryScreen";
-
 
 import { createMaterialTopTabNavigator } from "@react-navigation/material-top-tabs";
 
