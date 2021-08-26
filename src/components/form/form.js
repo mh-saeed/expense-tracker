@@ -11,10 +11,8 @@ const FormInput = () => {
 
   const onSubmit = (e) => {
     if (text.length === 0 || amount === 0) {
-      // e.preventDefault();
       alert(`please fill the fields!`);
     } else {
-      // e.preventDefault();
       const newTransaction = {
         id: Math.floor(Math.random() * 100000000),
         text,
