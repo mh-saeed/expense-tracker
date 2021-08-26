@@ -58,13 +58,13 @@ const styles = StyleSheet.create({
   },
   textIncome: {
     fontSize: 24,
-    color: "#009432",
+    color: "#19D95E",
     alignSelf: "center",
     fontWeight: "600",
   },
   textExpense: {
     fontSize: 24,
-    color: "#EA2027",
+    color: "#E81A30",
     alignSelf: "center",
     fontWeight: "600",
   },

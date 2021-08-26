@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
     // flex: 1,
     alignSelf: "center",
     alignItems: "center",
-    marginTop: 10,
+    marginTop: 20,
   },
   balanceContainer: {
     alignSelf: "flex-start",

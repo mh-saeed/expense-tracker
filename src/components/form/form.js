@@ -31,6 +31,7 @@ const FormInput = () => {
     <View>
       <Input
         label={"TRANSACTION NAME"}
+        labelStyle={{ color: "#353b48" }}
         placeholder="Enter text . . ."
         value={text}
         onChangeText={setText}
@@ -39,12 +40,13 @@ const FormInput = () => {
             name="document-text-outline"
             type="ionicon"
             size={30}
-            color="#222222"
+            color="#5f27cd"
           />
         }
       />
       <Input
         label="ENTER AMOUNT (e.g -amount/amount)"
+        labelStyle={{ color: "#222222" }}
         keyboardType="numeric"
         placeholder=" Enter Amount . . ."
         value={amount.toString()}
@@ -54,11 +56,15 @@ const FormInput = () => {
             name="attach-money"
             type="material-icons"
             size={30}
-            color="#222222"
+            color="#19D95E"
           />
         }
       />
-      <Button title="ADD TRANSACTION" onPress={(e) => onSubmit(e)} />
+      <Button
+        buttonStyle={{ backgroundColor: "#2083F8", marginTop: 10 }}
+        title="ADD TRANSACTION"
+        onPress={(e) => onSubmit(e)}
+      />
     </View>
   );
 };
