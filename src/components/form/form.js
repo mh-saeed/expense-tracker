@@ -5,14 +5,26 @@ import { GlobalContext } from "../../context/GlobalState";
 
 const FormInput = () => {
   const [text, setText] = useState("");
-  const [amount, setAmount] = useState(0);
+  const [amount, setAmount] = useState("0");
 
   const { addTransactions } = useContext(GlobalContext);
 
   const onSubmit = (e) => {
-    if (text.length === 0 || amount === 0) {
+    let checkAmount = String(amount);
+
+    //temp variable to store amount
+    let temp =
+      checkAmount[0] == "-"
+        ? String(checkAmount.slice(1))
+        : String(checkAmount);
+    // console.log(typeof temp, temp, typeof amount, amount);
+
+    if (text.length === 0 || amount === 0 || typeof amount !== "number") {
       alert(`please fill the fields!`);
+    } else if (temp == "NaN") {
+      alert("Special characters are not allowed");
     } else {
+      //creating new transaction
       const newTransaction = {
         id: Math.floor(Math.random() * 100000000),
         text,
@@ -23,7 +35,7 @@ const FormInput = () => {
 
       // updating field / clearing after form submission
       setText(" ");
-      setAmount(0);
+      setAmount("0");
     }
   };
 
@@ -34,7 +46,7 @@ const FormInput = () => {
         labelStyle={{ color: "#353b48" }}
         placeholder="Enter text . . ."
         value={text}
-        onChangeText={setText}
+        onChangeText={(text) => setText(text)}
         leftIcon={
           <Icon
             name="document-text-outline"
@@ -49,8 +61,8 @@ const FormInput = () => {
         labelStyle={{ color: "#222222" }}
         keyboardType="numeric"
         placeholder=" Enter Amount . . ."
-        value={amount.toString()}
-        onChangeText={setAmount}
+        value={amount}
+        onChangeText={(text) => setAmount(Number(text))}
         leftIcon={
           <Icon
             name="attach-money"
