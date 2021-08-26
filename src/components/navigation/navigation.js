@@ -1,4 +1,5 @@
 import React from "react";
+import { HeaderBackground } from "@react-navigation/elements";
 import { createDrawerNavigator } from "@react-navigation/drawer";
 import { NavigationContainer } from "@react-navigation/native";
 import HomeScreen from "../screens/homeScreen";
@@ -13,10 +14,46 @@ const NavigationBar = () => {
     <>
       <NavigationContainer>
         <Drawer.Navigator>
-          <Drawer.Screen name="Home" component={HomeScreen} />
-          <Drawer.Screen name="Transactions" component={TransactionScreen} />
-          <Drawer.Screen name="History" component={TransHistoryScreen} />
-          <Drawer.Screen name="About" component={AboutScreen} />
+          <Drawer.Screen
+            options={{
+              headerTintColor: "#fff",
+              headerBackground: () => (
+                <HeaderBackground style={{ backgroundColor: "#2980b9" }} />
+              ),
+            }}
+            name="Home"
+            component={HomeScreen}
+          />
+          <Drawer.Screen
+            options={{
+              headerTintColor: "#fff",
+              headerBackground: () => (
+                <HeaderBackground style={{ backgroundColor: "#2980b9" }} />
+              ),
+            }}
+            name="Transactions"
+            component={TransactionScreen}
+          />
+          <Drawer.Screen
+            options={{
+              headerTintColor: "#fff",
+              headerBackground: () => (
+                <HeaderBackground style={{ backgroundColor: "#2980b9" }} />
+              ),
+            }}
+            name="History"
+            component={TransHistoryScreen}
+          />
+          <Drawer.Screen
+            options={{
+              headerTintColor: "#fff",
+              headerBackground: () => (
+                <HeaderBackground style={{ backgroundColor: "#2980b9" }} />
+              ),
+            }}
+            name="About"
+            component={AboutScreen}
+          />
         </Drawer.Navigator>
       </NavigationContainer>
     </>
