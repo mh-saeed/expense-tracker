@@ -34,7 +34,7 @@ const styles = StyleSheet.create({
     left: 20,
   },
   statusCard: {
-    alignSelf: "flex-start",
+    alignSelf: "center",
     height: 150,
     top: -5,
   },

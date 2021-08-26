@@ -18,7 +18,7 @@ const NavigationBar = () => {
             options={{
               headerTintColor: "#fff",
               headerBackground: () => (
-                <HeaderBackground style={{ backgroundColor: "#2980b9" }} />
+                <HeaderBackground style={{ backgroundColor: "#2083F8" }} />
               ),
             }}
             name="Home"
@@ -28,7 +28,7 @@ const NavigationBar = () => {
             options={{
               headerTintColor: "#fff",
               headerBackground: () => (
-                <HeaderBackground style={{ backgroundColor: "#2980b9" }} />
+                <HeaderBackground style={{ backgroundColor: "#2083F8" }} />
               ),
             }}
             name="Transactions"
@@ -38,7 +38,7 @@ const NavigationBar = () => {
             options={{
               headerTintColor: "#fff",
               headerBackground: () => (
-                <HeaderBackground style={{ backgroundColor: "#2980b9" }} />
+                <HeaderBackground style={{ backgroundColor: "#2083F8" }} />
               ),
             }}
             name="History"
@@ -48,7 +48,7 @@ const NavigationBar = () => {
             options={{
               headerTintColor: "#fff",
               headerBackground: () => (
-                <HeaderBackground style={{ backgroundColor: "#2980b9" }} />
+                <HeaderBackground style={{ backgroundColor: "#2083F8" }} />
               ),
             }}
             name="About"
