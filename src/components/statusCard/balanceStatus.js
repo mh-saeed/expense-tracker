@@ -17,7 +17,7 @@ const BalanceStatus = () => {
 
 const styles = StyleSheet.create({
   text: {
-    fontSize: 28,
+    fontSize: 30,
     color: "#009432",
     fontWeight: "800",
   },

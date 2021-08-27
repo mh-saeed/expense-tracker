@@ -41,7 +41,7 @@ const styles = StyleSheet.create({
   form: {
     width: 320,
     top: 5,
-    height: 250,
+    height: 260,
   },
 });
 
