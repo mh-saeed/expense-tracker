@@ -10,20 +10,13 @@ const FormInput = () => {
 
   const { addTransactions } = useContext(GlobalContext);
 
-  const onSubmit = (e) => {
+  const onSubmit = () => {
     let checkAmount = String(amount);
-    // console.log(moment().format("MMMM Do YYYY, h:mm:ss a"));
-    //temp variable to store amount
-    let temp =
-      checkAmount[0] == "-"
-        ? String(checkAmount.slice(1))
-        : String(checkAmount);
-    // console.log(typeof temp, temp, typeof amount, amount);
 
     if (text.length === 0 || amount === 0 || typeof amount !== "number") {
       alert(`please fill the fields!`);
-    } else if (temp == "NaN") {
-      alert("Special characters are not allowed");
+    } else if (checkAmount[0] == "-" || checkAmount == "NaN") {
+      alert("Special characters are not allowed 1");
     } else {
       //creating new transaction
       const newTransaction = {
@@ -41,11 +34,34 @@ const FormInput = () => {
     }
   };
 
+  const onWithdraw = () => {
+    let checkAmount = String(amount);
+    if (text.length === 0 || amount === 0 || typeof amount !== "number") {
+      alert(`please fill the fields!`);
+    } else if (checkAmount[0] == "-" || checkAmount == "NaN") {
+      alert("special characters are not allowed 2");
+    } else {
+      //creating new transaction
+      const newTransaction = {
+        id: Math.floor(Math.random() * 100000000),
+        text,
+        amount: +-Math.abs(amount),
+        time: moment().format("MMMM Do YYYY, h:mm:ss a"),
+      };
+
+      addTransactions(newTransaction);
+
+      // updating field / clearing after form submission
+      setText("");
+      setAmount("0");
+    }
+  };
+
   return (
     <View>
       <Input
         label={"TRANSACTION NAME"}
-        labelStyle={{ color: "#353b48" }}
+        labelStyle={{ color: "#b2bec3" }}
         placeholder="Enter text . . ."
         value={text}
         onChangeText={(text) => setText(text)}
@@ -59,8 +75,8 @@ const FormInput = () => {
         }
       />
       <Input
-        label="ENTER AMOUNT (e.g -amount/amount)"
-        labelStyle={{ color: "#222222" }}
+        label="TRANSACTION AMOUNT"
+        labelStyle={{ color: "#b2bec3" }}
         keyboardType="numeric"
         placeholder=" Enter Amount . . ."
         value={amount}
@@ -74,11 +90,28 @@ const FormInput = () => {
           />
         }
       />
-      <Button
-        buttonStyle={{ backgroundColor: "#2083F8", marginTop: 10 }}
-        title="ADD TRANSACTION"
-        onPress={(e) => onSubmit(e)}
-      />
+      <View style={{ flexDirection: "row", alignSelf: "center" }}>
+        <Button
+          buttonStyle={{
+            backgroundColor: "#6ab04c",
+            marginTop: 10,
+            width: 160,
+            marginRight: 5,
+          }}
+          title="DEPOSIT"
+          onPress={() => onSubmit()}
+        />
+        <Button
+          buttonStyle={{
+            backgroundColor: "#eb4d4b",
+            marginTop: 10,
+            width: 160,
+            marginLeft: 5,
+          }}
+          title="WITHDRAW"
+          onPress={() => onWithdraw()}
+        />
+      </View>
     </View>
   );
 };
