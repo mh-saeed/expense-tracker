@@ -34,7 +34,7 @@ const FormInput = () => {
       addTransactions(newTransaction);
 
       // updating field / clearing after form submission
-      setText(" ");
+      setText("");
       setAmount("0");
     }
   };
