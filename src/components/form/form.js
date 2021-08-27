@@ -67,10 +67,10 @@ const FormInput = () => {
         onChangeText={(text) => setText(text)}
         leftIcon={
           <Icon
-            name="document-text-outline"
-            type="ionicon"
-            size={30}
-            color="#5f27cd"
+            name="text"
+            type="entypo"
+            size={18}
+            color="#9980FA"
           />
         }
       />
@@ -78,15 +78,15 @@ const FormInput = () => {
         label="TRANSACTION AMOUNT"
         labelStyle={{ color: "#b2bec3" }}
         keyboardType="numeric"
-        placeholder=" Enter Amount . . ."
+        placeholder="Enter Amount . . ."
         value={amount}
         onChangeText={(text) => setAmount(Number(text))}
         leftIcon={
           <Icon
             name="attach-money"
             type="material-icons"
-            size={30}
-            color="#19D95E"
+            size={18}
+            color="#2ed573"
           />
         }
       />
