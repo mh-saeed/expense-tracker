@@ -2,6 +2,7 @@ import React, { useState, useContext } from "react";
 import { View } from "react-native";
 import { Input, Button, Icon } from "react-native-elements";
 import { GlobalContext } from "../../context/GlobalState";
+import moment from "moment";
 
 const FormInput = () => {
   const [text, setText] = useState("");
@@ -11,7 +12,7 @@ const FormInput = () => {
 
   const onSubmit = (e) => {
     let checkAmount = String(amount);
-
+    // console.log(moment().format("MMMM Do YYYY, h:mm:ss a"));
     //temp variable to store amount
     let temp =
       checkAmount[0] == "-"
@@ -29,6 +30,7 @@ const FormInput = () => {
         id: Math.floor(Math.random() * 100000000),
         text,
         amount: +amount,
+        time: moment().format("MMMM Do YYYY, h:mm:ss a"),
       };
 
       addTransactions(newTransaction);
