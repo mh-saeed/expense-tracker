@@ -12,7 +12,7 @@ const AboutScreen = ({ navigation }) => {
         top: 50,
       }}
     >
-      <Card containerStyle={{borderRadius:6}}>
+      <Card containerStyle={{ borderRadius: 6 }}>
         <Card.Title>Expense Tracker</Card.Title>
         <Card.Divider />
 
