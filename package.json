@@ -15,6 +15,7 @@
     "@react-navigation/native-stack": "^6.1.0",
     "expo": "~42.0.1",
     "expo-blur": "~9.0.3",
+    "expo-linear-gradient": "~9.2.0",
     "expo-status-bar": "~1.0.4",
     "moment": "^2.29.1",
     "react": "16.13.1",

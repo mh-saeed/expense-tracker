@@ -61,7 +61,7 @@ const FormInput = () => {
     <View>
       <Input
         label={"TRANSACTION NAME"}
-        labelStyle={{ color: "#b2bec3" }}
+        labelStyle={{ color: "#757575" }}
         placeholder="Enter text . . ."
         value={text}
         onChangeText={(text) => setText(text)}
@@ -76,7 +76,7 @@ const FormInput = () => {
       />
       <Input
         label="TRANSACTION AMOUNT"
-        labelStyle={{ color: "#b2bec3" }}
+        labelStyle={{ color: "#757575" }}
         keyboardType="numeric"
         placeholder="Enter Amount . . ."
         value={amount}
