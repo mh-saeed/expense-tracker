@@ -95,8 +95,9 @@ const FormInput = () => {
           buttonStyle={{
             backgroundColor: "#6ab04c",
             marginTop: 10,
-            width: 160,
+            width: 150,
             marginRight: 5,
+            borderRadius:30
           }}
           title="DEPOSIT"
           onPress={() => onSubmit()}
@@ -105,8 +106,9 @@ const FormInput = () => {
           buttonStyle={{
             backgroundColor: "#eb4d4b",
             marginTop: 10,
-            width: 160,
+            width: 150,
             marginLeft: 5,
+            borderRadius:30
           }}
           title="WITHDRAW"
           onPress={() => onWithdraw()}

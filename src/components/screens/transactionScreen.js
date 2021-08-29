@@ -24,22 +24,25 @@ const TransactionScreen = () => {
 
 const styles = StyleSheet.create({
   transContainer: {
-    // flex: 1,
-    alignSelf: "center",
+    flex: 1,
     alignItems: "center",
     marginTop: 20,
+    width:310,
+    alignSelf:"center",
   },
   balanceContainer: {
-    alignSelf: "flex-start",
-    left: 20,
+    alignItems:"flex-start",
+    width:310
   },
   statusCard: {
-    alignSelf: "center",
+    alignItems:"center",
+    justifyContent:"center",
     height: 150,
-    top: -5,
+    width:300,
+    // backgroundColor:"red"
   },
   form: {
-    width: 320,
+    width: 310,
     top: 5,
     height: 260,
   },

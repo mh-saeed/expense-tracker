@@ -41,17 +41,17 @@ const styles = StyleSheet.create({
   },
   card1: {
     height: 120,
-    width: 160,
+    width: 150,
     justifyContent: "center",
     borderRadius: 6,
-    left: 5,
+    left: 8,
   },
   card2: {
     height: 120,
-    width: 160,
+    width: 150,
     justifyContent: "center",
     borderRadius: 6,
-    right: 5,
+    right: 8,
   },
   text: {
     alignSelf: "center",
