@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, StyleSheet, ScrollView, Dimensions } from "react-native";
+import { View, Text, StyleSheet, ScrollView, Dimensions, StatusBar } from "react-native";
 import StatusCard from "../statusCard/statusCard";
 import BalanceStatus from "../statusCard/balanceStatus";
 import FormInput from "../form/form";
@@ -36,7 +36,7 @@ const styles = StyleSheet.create({
     marginTop: 20,
     width: 310,
     alignSelf: "center",
-    height: Dimensions.get("window").height,
+    height: Dimensions.get("window").height-StatusBar.currentHeight,
   },
   balanceContainer: {
     alignItems: "flex-start",
