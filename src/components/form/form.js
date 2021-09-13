@@ -91,28 +91,29 @@ const FormInput = () => {
         }
       />
       <View style={{ flexDirection: "row", alignSelf: "center" }}>
-        <Button
+      <Button
           buttonStyle={{
-            backgroundColor: "#6ab04c",
+            backgroundColor: "#eb4d4b",
             marginTop: 10,
             width: 150,
             marginRight: 5,
             borderRadius:30
           }}
-          title="DEPOSIT"
-          onPress={() => onSubmit()}
+          title="- CASH OUT"
+          onPress={() => onWithdraw()}
         />
         <Button
           buttonStyle={{
-            backgroundColor: "#eb4d4b",
+            backgroundColor: "#6ab04c",
             marginTop: 10,
             width: 150,
             marginLeft: 5,
             borderRadius:30
           }}
-          title="WITHDRAW"
-          onPress={() => onWithdraw()}
+          title="+ CASH IN"
+          onPress={() => onSubmit()}
         />
+        
       </View>
     </View>
   );
